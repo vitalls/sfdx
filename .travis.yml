@@ -7,7 +7,7 @@ env:
   global:
     secure: kHbimaXXvg3+HGo06SQx8joXeRnwp7SfzBrdPslKQrxJQmc/gAMZocwd6S+G5rb9Uk8Bwi3Hwp8yqm7Ve83xfg2b0PLII5aL4544LaTlZ0gpem/1HPXe3ngzxrKlHL4zrfAAN4AMf1eoMmTW1kRmma7ft9OIwm64e5WIkoPwpg3Eapw604X3GSEkLMAIg37hfnL3rTCPnfvHbvnpmFd+nHoADE3Zml5bIB1VzOoz6fX16/Xb/8UUIW4xoLDr8Vl1wx5FQpGOt93FRk2G8obYMCStW3OjuWK0DRg442PTtE0YUr91J8+7F2u6LVkbSqCBmGosfBKU8LHIgkVrKTHXpHAHww6C7fujpLOb5RM02MkZT0lWDPH4G6vsFnYTrRb04u3gRObNOF1K9aJINJ9zJ8x98mKHzktHHat63pFXscWC6OKCNQy2bU9Ocoqzg4oRacUEpfJeu1g7KXU7CX2wq06HWC9uk14hal21dzeK4uaKnReTyqfrJ7DJ3/915acyDP3WpbnhuyzuaURda+Xf4rnIZ7SbZ/Qgm02MEoS17l1l2CVPXq9ZhfXN1pVFLdo77nwUdABFSFFNbKG6hKGVfhDml6LNC+IpxLcz3UYfga73b619WWFnkV/paQIrSEBGA6i8JcHi1IyvA+Urck305BkgtfTHXyQOcnKh7JtUCeY=
 before_install:
--- openssl aes-256-cbc -k "$super_secret_password" -in assets/server.key.enc -out assets/server.key -d
+-- openssl aes-256-cbc -k $super_secret_password -in assets/server.key.enc -out assets/server.key -d
 - export SFDX_AUTOUPDATE_DISABLE=false
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
